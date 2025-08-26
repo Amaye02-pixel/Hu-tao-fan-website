@@ -9,6 +9,34 @@ body {
     font-family: 'Cinzel', serif;
     background-color: #1a1a1a;
     color: #f4d9b0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Images for Each Page */
+body.home-bg {
+    background: url('Hutao1.jpeg') no-repeat center/cover fixed;
+    background-color: rgba(26, 26, 26, 0.7); /* Overlay for readability */
+    background-blend-mode: overlay;
+}
+
+body.funeral-bg {
+    background: url('Hutao2.jpeg') no-repeat center/cover fixed;
+    background-color: rgba(26, 26, 26, 0.7);
+    background-blend-mode: overlay;
+}
+
+body.ghostly-bg {
+    background: url('Hutao3.jpeg') no-repeat center/cover fixed;
+    background-color: rgba(26, 26, 26, 0.7);
+    background-blend-mode: overlay;
+}
+
+body.contact-bg {
+    background: url('Hutao4.jpg') no-repeat center/cover fixed;
+    background-color: rgba(26, 26, 26, 0.7);
+    background-blend-mode: overlay;
 }
 
 /* Flame Animation */
@@ -38,14 +66,14 @@ body {
     50% { opacity: 0.9; transform: translateY(-4px); }
 }
 
-/* Hu Tao Photo (Hutao2.jpg) */
+/* Hu Tao Photo (Hutao2.jpeg) */
 .hu-tao-photo {
     position: absolute;
     top: 10px;
     right: 20px;
     width: 80px;
     height: 80px;
-    background: url('Hutao2.jpg') no-repeat center/cover;
+    background: url('Hutao2.jpeg') no-repeat center/cover;
     opacity: 0.4;
     filter: drop-shadow(0 0 10px #ff6666);
     z-index: 0;
@@ -69,7 +97,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    position: relative;
 }
 
 .primary-nav .logo {
@@ -176,7 +203,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    position: relative;
 }
 
 .secondary-nav .logo {
@@ -271,7 +297,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    position: relative;
 }
 
 .mobile-nav .logo {
@@ -391,6 +416,9 @@ body {
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
+    background: rgba(26, 26, 26, 0.8); /* Semi-transparent for readability */
+    border-radius: 10px;
+    flex: 1;
 }
 
 .hero {
@@ -399,20 +427,6 @@ body {
     background: linear-gradient(180deg, #2b0a0a, #1a1a1a);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(255, 51, 51, 0.3);
-}
-
-.hero-image, .content-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px #ff6666);
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.hero-image:hover, .content-image:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
 }
 
 h1 {
@@ -493,6 +507,40 @@ input:focus, textarea:focus {
     box-shadow: 0 0 5px #ff3333;
 }
 
+/* Footer Styles */
+.footer {
+    background: linear-gradient(180deg, #3c0f0f, #1a1a1a);
+    padding: 20px;
+    text-align: center;
+    color: #f4d9b0;
+    border-top: 3px solid #ff3333;
+    margin-top: auto;
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #ff6666;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links li a {
+    color: #f4d9b0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #ff6666;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .primary-nav, .secondary-nav {
@@ -505,21 +553,66 @@ input:focus, textarea:focus {
         width: 60px;
         height: 60px;
         right: 10px;
-        background: url('Hutao2.jpg') no-repeat center/cover;
+        background: url('Hutao2.jpeg') no-repeat center/cover;
+    }
+    .mobile-nav .hu-tao-icon {
+        width: 30px;
+        height: 30px;
     }
     .content {
         margin: 20px;
+        padding: 15px;
     }
     h1 {
         font-size: 28px;
     }
-    .hero-image, .content-image {
-        max-width: 80%;
+    .hero {
+        padding: 30px 15px;
+    }
+    .footer {
+        padding: 15px;
+    }
+    .footer p {
+        font-size: 14px;
+    }
+    .footer-links li a {
+        font-size: 12px;
     }
 }
 
-@media (min-width: 769px) {
-    .mobile-nav {
-        display: none;
+@media (min-width: 769px) and (max-width: 1440px) {
+    .primary-nav .logo {
+        font-size: 24px;
+    }
+    .primary-nav .hu-tao-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .primary-nav .nav-links li a {
+        font-size: 16px;
+    }
+    .secondary-nav .logo {
+        font-size: 22px;
+    }
+    .secondary-nav .hu-tao-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .secondary-nav .nav-links li a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .hu-tao-photo {
+        width: 70px;
+        height: 70px;
+    }
+    .content {
+        max-width: 900px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .hero {
+        padding: 40px 20px;
     }
 }
