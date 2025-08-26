@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostly Tales - Hu Tao's Emporium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Primary Navigation (Desktop) -->
+    <nav class="primary-nav">
+        <div class="logo">
+            <img src="hu-tao-icon.png" alt="Hu Tao Icon" class="hu-tao-icon">
+            Hu Tao's Emporium
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="funeral-parlor.html">Funeral Parlor</a></li>
+            <li class="dropdown">
+                <a href="ghostly-tales.html" class="active">Ghostly Tales</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#spooky">Spooky Stories</a></li>
+                    <li><a href="#legends">Teyvat Legends</a></li>
+                    <li><a href="#pranks">Hu Tao's Pranks</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="flame-animation"></div>
+        <div class="hu-tao-photo"></div>
+    </nav>
+
+    <!-- Secondary Navigation (Alternative Style) -->
+    <nav class="secondary-nav">
+        <div class="logo">
+            <img src="hu-tao-icon.png" alt="Hu Tao Icon" class="hu-tao-icon">
+            Hu Tao's Emporium
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="funeral-parlor.html">Funeral Parlor</a></li>
+            <li class="dropdown">
+                <a href="ghostly-tales.html" class="active">Ghostly Tales</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#spooky">Spooky Stories</a></li>
+                    <li><a href="#legends">Teyvat Legends</a></li>
+                    <li><a href="#pranks">Hu Tao's Pranks</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="flame-animation"></div>
+        <div class="hu-tao-photo"></div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div class="logo">
+            <img src="hu-tao-icon.png" alt="Hu Tao Icon" class="hu-tao-icon">
+            Hu Tao's Emporium
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="funeral-parlor.html">Funeral Parlor</a></li>
+            <li class="dropdown">
+                <a href="ghostly-tales.html" class="active">Ghostly Tales</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#spooky">Spooky Stories</a></li>
+                    <li><a href="#legends">Teyvat Legends</a></li>
+                    <li><a href="#pranks">Hu Tao's Pranks</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="flame-animation"></div>
+        <div class="hu-tao-photo"></div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="content">
+        <section id="spooky">
+            <h1>Spooky Stories</h1>
+            <p>Hear chilling tales of spirits wandering Liyue’s misty cliffs, narrated with Hu Tao’s mischievous charm.</p>
+        </section>
+        <section id="legends">
+            <h1>Teyvat Legends</h1>
+            <p>Discover ancient myths of Teyvat, from the Adepti to forgotten souls, as told by Hu Tao.</p>
+        </section>
+        <section id="pranks">
+            <h1>Hu Tao's Pranks</h1>
+            <p>Relive Hu Tao’s legendary pranks, like hiding Zhongli’s staff or spooking Qiqi!</p>
+            <button class="cta-button">Share Your Tale</button>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript for mobile hamburger menu toggle
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.mobile-nav .nav-links').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('open');
+        });
+
+        // JavaScript for mobile dropdown toggle
+        document.querySelectorAll('.mobile-nav .dropdown > a').forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdownMenu = dropdown.nextElementSibling;
+                dropdownMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

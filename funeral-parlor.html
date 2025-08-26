@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funeral Parlor - Hu Tao's Emporium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Primary Navigation (Desktop) -->
+    <nav class="primary-nav">
+        <div class="logo">
+            <img src="hu-tao-icon.png" alt="Hu Tao Icon" class="hu-tao-icon">
+            Hu Tao's Emporium
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="funeral-parlor.html" class="active">Funeral Parlor</a></li>
+            <li class="dropdown">
+                <a href="ghostly-tales.html">Ghostly Tales</a>
+                <ul class="dropdown-menu">
+                    <li><a href="ghostly-tales.html#spooky">Spooky Stories</a></li>
+                    <li><a href="ghostly-tales.html#legends">Teyvat Legends</a></li>
+                    <li><a href="ghostly-tales.html#pranks">Hu Tao's Pranks</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="flame-animation"></div>
+        <div class="hu-tao-photo"></div>
+    </nav>
+
+    <!-- Secondary Navigation (Alternative Style) -->
+    <nav class="secondary-nav">
+        <div class="logo">
+            <img src="hu-tao-icon.png" alt="Hu Tao Icon" class="hu-tao-icon">
+            Hu Tao's Emporium
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="funeral-parlor.html" class="active">Funeral Parlor</a></li>
+            <li class="dropdown">
+                <a href="ghostly-tales.html">Ghostly Tales</a>
+                <ul class="dropdown-menu">
+                    <li><a href="ghostly-tales.html#spooky">Spooky Stories</a></li>
+                    <li><a href="ghostly-tales.html#legends">Teyvat Legends</a></li>
+                    <li><a href="ghostly-tales.html#pranks">Hu Tao's Pranks</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="flame-animation"></div>
+        <div class="hu-tao-photo"></div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div class="logo">
+            <img src="hu-tao-icon.png" alt="Hu Tao Icon" class="hu-tao-icon">
+            Hu Tao's Emporium
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="funeral-parlor.html" class="active">Funeral Parlor</a></li>
+            <li class="dropdown">
+                <a href="ghostly-tales.html">Ghostly Tales</a>
+                <ul class="dropdown-menu">
+                    <li><a href="ghostly-tales.html#spooky">Spooky Stories</a></li>
+                    <li><a href="ghostly-tales.html#legends">Teyvat Legends</a></li>
+                    <li><a href="ghostly-tales.html#pranks">Hu Tao's Pranks</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="flame-animation"></div>
+        <div class="hu-tao-photo"></div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="content">
+        <section>
+            <h1>Wangsheng Funeral Parlor</h1>
+            <p>At the Wangsheng Funeral Parlor, Hu Tao ensures every soul finds peace with a touch of flair. Our services blend tradition with a fiery twist, offering respectful farewells and ghostly guidance.</p>
+            <ul>
+                <li>Ceremonial Rites</li>
+                <li>Spiritual Consultations</li>
+                <li>Custom Coffins with Pyro Accents</li>
+            </ul>
+            <button class="cta-button">Book a Consultation</button>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript for mobile hamburger menu toggle
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.mobile-nav .nav-links').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('open');
+        });
+
+        // JavaScript for mobile dropdown toggle
+        document.querySelectorAll('.mobile-nav .dropdown > a').forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdownMenu = dropdown.nextElementSibling;
+                dropdownMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
